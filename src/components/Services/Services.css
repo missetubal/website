@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 768px) {
     .services_container{
-        grid-template-columns: 350px;
+        grid-template-columns: 300px;
     }
 }
 @media screen and (max-width: 350px) {

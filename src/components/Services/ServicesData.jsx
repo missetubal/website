@@ -7,7 +7,7 @@ export const data = [
     },
     {
         id: 3,
-        image: 'https://cdn-icons.flaticon.com/png/512/2316/premium/2316159.png?token=exp=1659535673~hmac=c246d6d338f92198019b8d4381845364',
+        image: 'https://cdn-icons-png.flaticon.com/512/2721/2721304.png',
         title: 'UI/UX',
         description: 'Good UX design makes the site navigation seamless and optimizes the interaction between your business and potential customers.',
     },
