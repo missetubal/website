@@ -29,6 +29,6 @@ export const resumeData = [
     icon: 'icon-briefcase',
     year: '2022-Present',
     title: 'Ideia Tecnologia - Frontend Developer',
-    desc: 'Prestação de serviços relacionados a manutenção dos portais web e mobile de administradora de condomínios Utilização de tecnologias como React Native, React Js, SCSS, Typescript, Styled Components, consumo de API REST.',
+    desc: 'Maintenance of web and mobile portals for condominium management. Use of technologies such as React Native, React Js, SCSS, Typescript, Styled Components, REST API consumption.',
   },
 ];
