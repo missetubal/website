@@ -1,4 +1,4 @@
-import { NavLink, TabDataProps } from '@/types';
+import { NavLink, TabDataProps } from '@/src/types';
 
 export const navLinks: NavLink[] = [
   {
