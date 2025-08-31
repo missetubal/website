@@ -11,9 +11,8 @@ export const About = () => {
         <div className='about_data grid'>
           <div className='about_info'>
             <p className='about_description'>
-              Hi! My name is Michelle Setúbal, I'm a front end developer from
-              Bahia, Brazil. I'm focusing my studies in mobile apps and web
-              sites.
+              Experienced Frontend Developer with 3+ years of expertise in
+              building and maintaining web and mobile applications.
             </p>
             <a
               href='https://drive.google.com/drive/folders/14JlZNJLthj2JxQdSALHU1-S6bcobOJrh?usp=sharing'
@@ -28,7 +27,7 @@ export const About = () => {
             <div className='skill_data'>
               <div className='skill_title'>
                 <h3 className='skill_name'>Mobile Development</h3>
-                <span className='skill_number '>58%</span>
+                <span className='skill_number '>70%</span>
               </div>
               <div className='skill_bar'>
                 <span className='skill_percentage mobile'></span>
@@ -38,7 +37,7 @@ export const About = () => {
             <div className='skill_data'>
               <div className='skill_title'>
                 <h3 className='skill_name'>Web Development</h3>
-                <span className='skill_number '>50%</span>
+                <span className='skill_number '>78%</span>
               </div>
               <div className='skill_bar'>
                 <span className='skill_percentage development'></span>
@@ -47,13 +46,23 @@ export const About = () => {
 
             <div className='skill_data'>
               <div className='skill_title'>
+                <h3 className='skill_name'> NLP</h3>
+                <span className='skill_number '>60%</span>
+              </div>
+              <div className='skill_bar'>
+                <span className='skill_percentage qa'></span>
+              </div>
+            </div>
+            {/* 
+            <div className='skill_data'>
+              <div className='skill_title'>
                 <h3 className='skill_name'> QA</h3>
                 <span className='skill_number '>45%</span>
               </div>
               <div className='skill_bar'>
                 <span className='skill_percentage qa'></span>
               </div>
-            </div>
+            </div> */}
 
             <div className='skill_data'>
               <div className='skill_title'>

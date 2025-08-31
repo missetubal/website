@@ -16,6 +16,15 @@ export const resumeData = [
     desc: 'Postgraduate course covering topics related to the concept and history of Software Engineering, Software Architecture, Project Management, Agile Methodologies Applied to Software Development, Quality Test Parameters and Technologies Applied to the Database for Software Development .',
   },
   {
+    id: 2,
+    category: 'education',
+    icon: 'icon-graduation',
+    year: '2024-2025',
+    title:
+      'MIT in Artificial Intelligence, Machine Learning, and Deep Learning',
+    desc: 'Postgraduate course covering topics related to the concepts and history of Artificial Intelligence, Machine Learning, and Deep Learning, with a focus on practical applications. The curriculum includes Machine Learning Engineering, Natural Language Processing (NLP) with Python, Generative AI (including Large Language Models), Neural Networks with TensorFlow, and the validation of predictive models.',
+  },
+  {
     id: 3,
     category: 'experience',
     icon: 'icon-briefcase',
