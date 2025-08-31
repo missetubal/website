@@ -22,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={` ${jetBrainsMono.variable} antialiased`}>
-        <Header />
         {children}
       </body>
     </html>

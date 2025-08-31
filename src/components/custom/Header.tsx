@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { navLinks } from '@/src/constants';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import { NavLink } from './NavLink';
 
 export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -37,12 +38,7 @@ export const Header = () => {
           <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0'>
             {navLinks.map((link, index) => (
               <li key={index}>
-                <Link
-                  href={link.path}
-                  className='block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white'
-                >
-                  {link.title}
-                </Link>{' '}
+                <NavLink path={link.path} title={link.title} />
               </li>
             ))}
           </ul>
