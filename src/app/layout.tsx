@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { JetBrains_Mono, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Header } from '../components/custom';
+import { ThemeProvider } from '../context/theme';
 
 const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrainsMono',
@@ -21,8 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={` ${jetBrainsMono.variable} antialiased`}>
-        {children}
+      <body
+        className={`bg-white transition-colors dark:bg-gray-900 dark:text-white  ${jetBrainsMono.variable} antialiased`}
+      >
+        <ThemeProvider>
+          <Header />
+          <main className='min-h-screen pt-24'>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,75 +1,108 @@
 'use client';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { fadeIn, fadeInUp, scaleIn } from '@/src/lib/animation';
 
 export const Hero = () => {
   return (
-    <section className='lg:py-16'>
-      <div className='grid grid-cols-1 sm:grid-cols-12'>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className='col-span-8 place-self-center text-center sm:text-left justify-self-start'
-        >
-          <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold'>
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600'>
-              Hello, , I&apos;m{' '}
-            </span>
-            <br></br>
-            <TypeAnimation
-              sequence={[
-                'Michelle',
-                1000,
-                'Web Developer',
-                1000,
-                'Mobile Developer',
-                1000,
-              ]}
-              wrapper='span'
-              speed={50}
-              repeat={Infinity}
+    <section className='py-28'>
+      <div className='container max-w-7xl mx-auto px-4'>
+        <div className='max-w-3xl mx-auto text-center'>
+          <motion.div
+            className='flex justify-center items-center mb-4'
+            {...scaleIn}
+            transition={{ delay: 0.2 }}
+          >
+            <Image
+              src='/assets/heart.png'
+              alt='Profile'
+              width={100}
+              height={100}
+              className='rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary'
             />
-          </h1>
-          <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
-          </p>
-          <div>
-            <Link
-              href='/#contact'
-              className='px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white'
+          </motion.div>
+          <motion.h1
+            className='text-4xl md:text-6xl font-bold mb-6'
+            {...fadeInUp}
+            transition={{ delay: 0.3 }}
+          >
+            Hi, I&apos;m{' '}
+            <motion.span
+              className='text-primary'
+              {...fadeIn}
+              transition={{ delay: 0.8 }}
             >
-              Hire Me
-            </Link>
-            <Link
-              href='/'
-              className='px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3'
+              Michelle Setúbal
+            </motion.span>
+          </motion.h1>
+          <motion.p
+            className='text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8'
+            {...fadeInUp}
+            transition={{ delay: 0.4 }}
+          >
+            Full Stack Developer | NLP Enthusiast | Open Source Contributor
+          </motion.p>
+          <motion.div
+            className='flex justify-center space-x-4 mb-8'
+            {...fadeInUp}
+            transition={{ delay: 0.5 }}
+          >
+            <motion.a
+              href='https://github.com/missetubal'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors'
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>
-                Download CV
-              </span>
-            </Link>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className='col-span-4 place-self-center mt-4 lg:mt-0'
-        >
-          <div className='rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative'>
-            {/* <Image
-              src='/images/hero-image.png'
-              alt='hero image'
-              className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
-              width={300}
-              height={300}
-            /> */}
-          </div>
-        </motion.div>
+              <FaGithub />
+            </motion.a>
+            <motion.a
+              href='https://linkedin.com/in/michelle-setubal'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors'
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaLinkedin />
+            </motion.a>
+            {/* <motion.a
+              href='https://twitter.com'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors'
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaTwitter />
+            </motion.a> */}
+          </motion.div>
+          <motion.div
+            className='flex flex-col md:flex-row justify-center gap-4'
+            {...fadeInUp}
+            transition={{ delay: 0.6 }}
+          >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href='/projects'
+                className='bg-primary inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors'
+              >
+                View Projects
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href='/contact'
+                className=' inline-block w-full bg-gray-500  md:w-auto text-gray-800 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors'
+              >
+                Contact Me
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
