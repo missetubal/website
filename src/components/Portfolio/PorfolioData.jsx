@@ -1,7 +1,7 @@
 import devgym from '../../assets/devgym.png';
 import costs from '../../assets/costs.png';
 import food from '../../assets/OrderMyFood.png';
-import interview from '../../assets/InterviewPrep';
+import interview from '../../assets/InterviewPrep.png';
 export const portfolioData = [
   {
     id: 1,
